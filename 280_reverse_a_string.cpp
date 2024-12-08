@@ -1,5 +1,6 @@
 #include<iostream>
 #include<stack>
+using namespace std;
 //return the address of the string
 char* reverse(char *S, int len)
 {
