@@ -1,34 +1,25 @@
 #include <iostream>
 #include <string>
-#include <vector>
 using namespace std;
 
 int main()
 {
     int n;
-    cin >> n;
-    vector<string> arr(n);
-
-    // Input
+    cin >> n; // Read the number of words
     for (int i = 0; i < n; i++)
     {
-        cin >> arr[i];
-    }
-
-    // Solution
-    for (int i = 0; i < n; i++)
-    {
-        if (arr[i].length() >= 10)
+        string word;
+        cin >> word; // Read each word
+        if (word.length() > 10)
         {
-            arr[i] = arr[i][0] + to_string(arr[i].length() - 2) + arr[i].back();
+            // Abbreviate the word
+            cout << word[0] + to_string(word.length() - 2) + word.back() << endl;
+        }
+        else
+        {
+            // Print the word as is
+            cout << word << endl;
         }
     }
-
-    // Output
-    for (const auto &str : arr)
-    {
-        cout << str << endl;
-    }
-
     return 0;
 }
