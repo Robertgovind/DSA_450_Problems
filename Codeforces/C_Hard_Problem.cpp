@@ -41,6 +41,7 @@ int main()
             seated += reaminingSeats;
         }
         cout << seated << endl;
+        // cout<< min(2*m,a+b+c)<<endl;
     }
     return 0;
 }
